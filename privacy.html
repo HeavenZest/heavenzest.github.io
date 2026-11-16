@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>นโยบายความเป็นส่วนตัว (Privacy Policy) — MyApp</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Thai', system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden items-center gap-3 rounded-xl bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-lg">
+    <svg class="h-5 w-5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toast-message">คัดลอกอีเมลติดต่อแล้ว</span>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3.5 sm:px-6">
+      <a href="#top" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-slate-900">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </span>
+        <span>MyApp</span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+        <a href="#collection" class="hover:text-indigo-600 transition-colors">ข้อมูลที่จัดเก็บ</a>
+        <a href="#usage" class="hover:text-indigo-600 transition-colors">การใช้งานข้อมูล</a>
+        <a href="#security" class="hover:text-indigo-600 transition-colors">ความปลอดภัย</a>
+        <a href="#rights" class="hover:text-indigo-600 transition-colors">สิทธิของผู้ใช้</a>
+        <a href="#contact" class="hover:text-indigo-600 transition-colors">ติดต่อเรา</a>
+      </nav>
+
+      <button id="lang-toggle" type="button" class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-100 transition-colors">
+        EN / ไทย
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+    <!-- Title Banner -->
+    <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+      <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700">
+        อัปเดตล่าสุด: 16 พฤศจิกายน 2026
+      </div>
+      <h1 id="page-title" class="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        นโยบายความเป็นส่วนตัว (Privacy Policy)
+      </h1>
+      <p id="page-intro" class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+        นโยบายความเป็นส่วนตัวฉบับนี้อธิบายถึงวิธีที่แอปพลิเคชัน <strong>MyApp</strong> (ดูแลโดย HeavenZest) จัดเก็บ ใช้งาน และคุ้มครองข้อมูลส่วนบุคคลของคุณเมื่อเข้าใช้งานเว็บไซต์หรือเชื่อมต่อบริการผ่านแอปพลิเคชัน
+      </p>
+
+      <!-- Quick Summary Cards -->
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200/70">
+          <div class="text-xs font-semibold text-indigo-600">หลักการข้อที่ 1</div>
+          <div id="sum-1-title" class="mt-1 text-sm font-semibold text-slate-900">เก็บเท่าที่จำเป็น</div>
+          <p id="sum-1-desc" class="mt-1 text-xs text-slate-600">ใช้ข้อมูลเฉพาะส่วนที่จำเป็นต่อการทำงานของฟีเจอร์ที่คุณเลือกใช้</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200/70">
+          <div class="text-xs font-semibold text-indigo-600">หลักการข้อที่ 2</div>
+          <div id="sum-2-title" class="mt-1 text-sm font-semibold text-slate-900">ไม่ขายข้อมูล</div>
+          <p id="sum-2-desc" class="mt-1 text-xs text-slate-600">ไม่มีการจำหน่ายหรือส่งต่อข้อมูลส่วนบุคคลให้บุคคลภายนอกเพื่อการโฆษณา</p>
+        </div>
+        <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200/70">
+          <div class="text-xs font-semibold text-indigo-600">หลักการข้อที่ 3</div>
+          <div id="sum-3-title" class="mt-1 text-sm font-semibold text-slate-900">ควบคุมได้ตลอดเวลา</div>
+          <p id="sum-3-desc" class="mt-1 text-xs text-slate-600">คุณสามารถขอดู แก้ไข หรือลบข้อมูลของคุณได้ทุกเมื่อ</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Sections -->
+    <div class="mt-8 space-y-6">
+      <section id="collection" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 id="sec-1-title" class="text-lg font-bold text-slate-900 sm:text-xl">1. ข้อมูลที่เราอาจจัดเก็บ</h2>
+        <p id="sec-1-p" class="mt-3 text-sm leading-relaxed text-slate-600">
+          ขึ้นอยู่กับลักษณะการใช้งานของคุณ แอปพลิเคชันอาจได้รับข้อมูลดังต่อไปนี้:
+        </p>
+        <ul id="sec-1-list" class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-600">
+          <li><strong>ข้อมูลบัญชีและการยืนยันตัวตน:</strong> เช่น ชื่อผู้ใช้ อีเมล หรือโทเคนยืนยันตัวตนเมื่อคุณลงชื่อเข้าใช้ผ่านผู้ให้บริการภายนอก (เช่น Google หรือ GitHub)</li>
+          <li><strong>ข้อมูลการใช้งานพื้นฐาน:</strong> เช่น บันทึกข้อผิดพลาด (Error Logs) ประเภทเบราว์เซอร์ และเวลาที่เข้าใช้งาน เพื่อใช้ปรับปรุงเสถียรภาพของระบบ</li>
+          <li><strong>ข้อมูลที่คุณส่งให้แอปโดยตรง:</strong> เช่น ข้อความหรือข้อมูลที่กรอกผ่านแบบฟอร์มติดต่อ</li>
+        </ul>
+      </section>
+
+      <section id="usage" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 id="sec-2-title" class="text-lg font-bold text-slate-900 sm:text-xl">2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
+        <ul id="sec-2-list" class="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-600">
+          <li>เพื่อให้บริการและประมวลผลการทำงานหลักของแอปพลิเคชันตามที่คุณร้องขอ</li>
+          <li>เพื่อยืนยันตัวตน ป้องกันการใช้งานที่ไม่ได้รับอนุญาต และรักษาความปลอดภัยของระบบ</li>
+          <li>เพื่อติดต่อกลับหรือให้ความช่วยเหลือเมื่อคุณส่งคำถามหรือแจ้งปัญหา</li>
+        </ul>
+      </section>
+
+      <section id="security" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 id="sec-3-title" class="text-lg font-bold text-slate-900 sm:text-xl">3. การจัดเก็บและความปลอดภัย</h2>
+        <p id="sec-3-p" class="mt-3 text-sm leading-relaxed text-slate-600">
+          เว็บไซต์นี้เผยแพร่ผ่าน GitHub Pages โดยใช้การเข้ารหัส HTTPS เพื่อความปลอดภัยในการรับ-ส่งข้อมูล เราจัดเก็บข้อมูลเท่าที่จำเป็นตามระยะเวลาที่เหมาะสม และจำกัดสิทธิ์การเข้าถึงเฉพาะผู้ดูแลระบบเท่านั้น
+        </p>
+      </section>
+
+      <section id="rights" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 id="sec-4-title" class="text-lg font-bold text-slate-900 sm:text-xl">4. สิทธิของเจ้าของข้อมูล</h2>
+        <p id="sec-4-p" class="mt-3 text-sm leading-relaxed text-slate-600">
+          คุณมีสิทธิขอเข้าถึง ขอรับสำเนา ขอแก้ไขให้ถูกต้อง หรือขอลบข้อมูลส่วนบุคคลของคุณ รวมถึงเพิกถอนความยินยอมในการเชื่อมต่อบัญชีภายนอกได้ตลอดเวลา
+        </p>
+      </section>
+
+      <section id="contact" class="rounded-2xl border border-indigo-200 bg-indigo-50/60 p-6 sm:p-8">
+        <h2 id="sec-5-title" class="text-lg font-bold text-slate-900 sm:text-xl">5. ช่องทางติดต่อผู้ดูแลระบบ</h2>
+        <p id="sec-5-p" class="mt-2 text-sm leading-relaxed text-slate-700">
+          หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว หรือต้องการใช้สิทธิเกี่ยวกับข้อมูลของคุณ สามารถติดต่อได้ที่:
+        </p>
+        <div class="mt-4 flex flex-wrap items-center gap-3">
+          <span class="rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800">
+            heavenzest@msn.com
+          </span>
+          <button id="copy-email-btn" type="button" class="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors">
+            คัดลอกอีเมล
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-8 mt-8">
+    <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 text-xs text-slate-500 sm:flex-row sm:px-6">
+      <p>&copy; 2026 HeavenZest. All rights reserved.</p>
+      <a href="#top" class="font-medium text-indigo-600 hover:underline">กลับขึ้นด้านบน</a>
+    </div>
+  </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    const langToggle = document.getElementById('lang-toggle');
+    let toastTimer;
+    let isEnglish = false;
+
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    copyBtn.addEventListener('click', () => {
+      const email = 'heavenzest@msn.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast(isEnglish ? 'Email copied to clipboard' : 'คัดลอกอีเมลเรียบร้อยแล้ว');
+        }).catch(() => fallbackCopy(email));
+      } else {
+        fallbackCopy(email);
+      }
+    });
+
+    function fallbackCopy(text) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      showToast(isEnglish ? 'Email copied to clipboard' : 'คัดลอกอีเมลเรียบร้อยแล้ว');
+    }
+
+    const content = {
+      th: {
+        title: 'นโยบายความเป็นส่วนตัว (Privacy Policy)',
+        intro: 'นโยบายความเป็นส่วนตัวฉบับนี้อธิบายถึงวิธีที่แอปพลิเคชัน <strong>MyApp</strong> (ดูแลโดย HeavenZest) จัดเก็บ ใช้งาน และคุ้มครองข้อมูลส่วนบุคคลของคุณเมื่อเข้าใช้งานเว็บไซต์หรือเชื่อมต่อบริการผ่านแอปพลิเคชัน',
+        s1t: 'เก็บเท่าที่จำเป็น',
+        s1d: 'ใช้ข้อมูลเฉพาะส่วนที่จำเป็นต่อการทำงานของฟีเจอร์ที่คุณเลือกใช้',
+        s2t: 'ไม่ขายข้อมูล',
+        s2d: 'ไม่มีการจำหน่ายหรือส่งต่อข้อมูลส่วนบุคคลให้บุคคลภายนอกเพื่อการโฆษณา',
+        s3t: 'ควบคุมได้ตลอดเวลา',
+        s3d: 'คุณสามารถขอดู แก้ไข หรือลบข้อมูลของคุณได้ทุกเมื่อ',
+        sec1t: '1. ข้อมูลที่เราอาจจัดเก็บ',
+        sec2t: '2. วัตถุประสงค์ในการใช้ข้อมูล',
+        sec3t: '3. การจัดเก็บและความปลอดภัย',
+        sec3p: 'เว็บไซต์นี้เผยแพร่ผ่าน GitHub Pages โดยใช้การเข้ารหัส HTTPS เพื่อความปลอดภัยในการรับ-ส่งข้อมูล เราจัดเก็บข้อมูลเท่าที่จำเป็นตามระยะเวลาที่เหมาะสม และจำกัดสิทธิ์การเข้าถึงเฉพาะผู้ดูแลระบบเท่านั้น',
+        sec4t: '4. สิทธิของเจ้าของข้อมูล',
+        sec4p: 'คุณมีสิทธิขอเข้าถึง ขอรับสำเนา ขอแก้ไขให้ถูกต้อง หรือขอลบข้อมูลส่วนบุคคลของคุณ รวมถึงเพิกถอนความยินยอมในการเชื่อมต่อบัญชีภายนอกได้ตลอดเวลา',
+        sec5t: '5. ช่องทางติดต่อผู้ดูแลระบบ',
+        sec5p: 'หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว หรือต้องการใช้สิทธิเกี่ยวกับข้อมูลของคุณ สามารถติดต่อได้ที่:',
+        copy: 'คัดลอกอีเมล'
+      },
+      en: {
+        title: 'Privacy Policy',
+        intro: 'This Privacy Policy explains how <strong>MyApp</strong> (operated by HeavenZest) collects, uses, and protects your information when you visit this website or use the application.',
+        s1t: 'Minimal Data',
+        s1d: 'Only data strictly required for the features you use is processed.',
+        s2t: 'No Data Selling',
+        s2d: 'We never sell or share your personal data with third parties for advertising.',
+        s3t: 'Full Control',
+        s3d: 'You may request access, correction, or deletion of your data at any time.',
+        sec1t: '1. Information We May Collect',
+        sec2t: '2. How We Use Information',
+        sec3t: '3. Storage & Security',
+        sec3p: 'This site is hosted on GitHub Pages with HTTPS encryption. We retain only necessary data for an appropriate duration and restrict access to authorized administrators.',
+        sec4t: '4. Your Data Rights',
+        sec4p: 'You have the right to access, request a copy of, update, or delete your personal data, as well as revoke third-party account permissions at any time.',
+        sec5t: '5. Contact Us',
+        sec5p: 'If you have any questions about this Privacy Policy or your data rights, please contact:',
+        copy: 'Copy Email'
+      }
+    };
+
+    langToggle.addEventListener('click', () => {
+      isEnglish = !isEnglish;
+      const c = isEnglish ? content.en : content.th;
+      document.getElementById('page-title').textContent = c.title;
+      document.getElementById('page-intro').innerHTML = c.intro;
+      document.getElementById('sum-1-title').textContent = c.s1t;
+      document.getElementById('sum-1-desc').textContent = c.s1d;
+      document.getElementById('sum-2-title').textContent = c.s2t;
+      document.getElementById('sum-2-desc').textContent = c.s2d;
+      document.getElementById('sum-3-title').textContent = c.s3t;
+      document.getElementById('sum-3-desc').textContent = c.s3d;
+      document.getElementById('sec-1-title').textContent = c.sec1t;
+      document.getElementById('sec-2-title').textContent = c.sec2t;
+      document.getElementById('sec-3-title').textContent = c.sec3t;
+      document.getElementById('sec-3-p').textContent = c.sec3p;
+      document.getElementById('sec-4-title').textContent = c.sec4t;
+      document.getElementById('sec-4-p').textContent = c.sec4p;
+      document.getElementById('sec-5-title').textContent = c.sec5t;
+      document.getElementById('sec-5-p').textContent = c.sec5p;
+      copyBtn.textContent = c.copy;
+    });
+  </script>
+</body>
+</html>
